@@ -11,10 +11,7 @@
   background-color: transparent;
   // .header__logo
 
- 
   // .header__menu
-
- 
 }
 .menu {
   display: flex;
@@ -31,6 +28,14 @@
       text-transform: uppercase;
       text-align: center;
       color: #fff;
+    }
+  }
+  &.hidden {
+  }
+
+  @media (max-width: 1023px) {
+    &.hidden {
+      display: none;
     }
   }
 }
