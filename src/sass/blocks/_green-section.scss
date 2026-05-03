@@ -1,0 +1,47 @@
+.green-section {
+  background: #95e1d3;
+  // .green-section__container
+
+ 
+
+  // .green-section__cards
+
+  &__cards {
+    display: flex;
+  }
+
+  // .green-section__card
+
+  &__card {
+    flex: 0 1 234px;
+    border-inline: 1px solid #fff;
+    padding: 68px 0;
+    &:first-child{
+        border-left: 2px solid #fff;
+    }
+    &:last-child{
+        border-right: 2px solid #fff;
+    }
+  }
+}
+
+.green-card {
+  // .green-card__number
+
+  &__number {
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+  }
+
+  // .green-card__subtitle
+
+  &__subtitle {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+  }
+}

@@ -1,0 +1,119 @@
+.ourwork {
+  padding-top: 112px;
+  // .ourwork__container
+
+
+  // .ourwork__subtitle
+
+  &__subtitle {
+    @include section-subtitle;
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  // .ourwork__title
+
+  &__title {
+    @include section-title;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    &::after {
+      @include title-after-element;
+      margin-top: 41px;
+    }
+  }
+
+  // .ourwork__text
+
+  &__text {
+    @include section-text;
+    margin-bottom: 84px;
+  }
+
+  // .ourwork__content
+
+  &__content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  // .ourwork__item
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    &:nth-child(3) {
+      grid-row: span 2;
+    }
+
+    &::before {
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.3s ease;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: linear-gradient(
+        360deg,
+        rgba(237, 215, 137, 0.9) 0%,
+        rgba(233, 130, 131, 0.9) 100%
+      );
+    }
+
+    &:hover::before {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item-hoverblock {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .4s ease;
+    position: absolute;
+    width: 100%;
+    top: 31.21%;
+    left: 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      height: 42px;
+      width: 42px;
+      margin-bottom: 57px;
+    }
+    h4 {
+      min-height: 50px;
+      display: block;
+      width: 100%;
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+    }
+    p {
+      min-height: 30px;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  &__item:hover &__item-hoverblock {
+    visibility: visible;
+    opacity: 1;
+  }
+}

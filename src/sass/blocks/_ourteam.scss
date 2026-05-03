@@ -1,0 +1,123 @@
+.ourteam {
+  padding: 84px 0;
+  // .ourteam__container
+
+
+
+  // .ourteam__subtitle
+
+  &__subtitle {
+    @include section-subtitle;
+    text-align: center;
+    padding: 25px;
+  }
+
+  // .ourteam__title
+
+  &__title {
+    @include section-title;
+    text-align: center;
+    padding: 21px;
+    margin-bottom: 38px;
+    &::after {
+      @include title-after-element;
+      margin-top: 42px;
+    }
+  }
+
+  // .ourteam__text
+
+  &__text {
+    @include section-text;
+    margin-bottom: 100px;
+  }
+
+  // .ourteam__cards
+
+  &__cards {
+    display: flex;
+    gap: 30px;
+  }
+
+  // .ourteam__card
+
+  &__card {
+    flex: 0 1 33.33333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // .ourteam__card-image
+
+  &__card-image {
+    aspect-ratio: 370 / 424;
+    margin-bottom: 30px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:before {
+      transition: all 0.3s ease;
+      content: '';
+      visibility: hidden;
+      opacity: 0;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        360deg,
+        rgba(237, 215, 137, 0.9) 0%,
+        rgba(233, 130, 131, 0.9) 100%
+      );
+    }
+    &:hover:before {
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-5%, -5%);
+    }
+  }
+  
+
+  &__card-socials {
+    transition: all 0.5s ease;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -55%);
+    display: flex;
+  }
+
+  &__card-image:hover &__card-socials {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  // .ourteam__card-fio
+
+  &__card-fio {
+    margin-bottom: 33px;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2d3033;
+  }
+
+  // .ourteam__card-job
+
+  &__card-job {
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #2d3033;
+  }
+}

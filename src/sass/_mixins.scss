@@ -1,0 +1,28 @@
+@mixin section-subtitle() {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 30px;
+  color: #2d3033;
+}
+
+@mixin section-title() {
+  font-weight: 900;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #2d3033;
+}
+
+@mixin title-after-element($color: #f38281) {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 170px;
+  min-height: 4px;
+  background: $color;
+}
+
+@mixin section-text() {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}

@@ -1,0 +1,37 @@
+@import "./sass/fonts", "./sass/normalize", "./sass/variables", "./sass/mixins";
+@import "./sass/blocks/header", "./sass/blocks/welcome"
+        ,"./sass/blocks/about"
+        ,"./sass/blocks/green-section"
+        ,"./sass/blocks/services"
+        ,"./sass/blocks/design"
+        ,"./sass/blocks/wedo"
+        ,"./sass/blocks/ourteam"
+        ,"./sass/blocks/figures"
+        ,"./sass/blocks/ourwork"
+        ,"./sass/blocks/peoplesay"
+        ,"./sass/blocks/blog"
+        ,"./sass/blocks/footer";
+// Import all of Bootstrap’s CSS
+@import "bootstrap/scss/bootstrap";
+body {
+    font-family: $font-family;
+}
+
+._container {
+    min-height: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+
+    .page {
+        flex: 1 1 auto;
+    }
+}
